@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+            html {
+                font-family: 'Roboto', sans-serif;
+            }
+            header {
+                text-align: center;
+                background-color: rgba(255, 213, 0, 0.8);
+                padding: 2% 0;
+                color: #00509d;
+                font-family: 'Bebas Neue', cursive;
+                font-weight: lighter;
+                font-size: 2rem;
+                overflow-x: hidden;
+                width: 100%
+            }
+            body {
+                margin: 0;
+                color: #fdc500;
+                background-image: url("https://cutewallpaper.org/21/professional-website-background/professional-images-for-website-background-13-Ride-Now-Pte-Ltd.jpg");
+                box-sizing: border-box;
+                overflow-x: hidden;
+            }
+            form {
+                padding: 2.5rem;
+                border-radius: 0.25rem;
+                background: rgba(0, 80, 157, 0.8);
+                border-style: dashed;
+                border-color: #ffd500;
+                border-width: 4px;
+                margin: 15vw;
+                margin-top: 3vw;
+            }
+            .form-control {
+                width: 100%;
+                height: 2rem;
+                margin: auto 1.25rem 1.25rem auto;
+                border: 2px solid #ffd500;
+            }
+            .form-group {
+                padding-bottom: 2.5rem;
+            }
+            p,
+            #name-label,
+            #email-label,
+            #number-label  {
+                font-family: 'Bebas Neue', cursive;
+                font-size: 2rem;
+                margin: 0.5rem;
+            }
+            textarea {
+                margin-bottom: 1rem;
+                width: 100%;
+                resize: vertical;
+                min-height: 120px;
+                border: 2px solid #ffd500;
+            }
+           button {
+                height: 50px;
+                width: 100%;
+                background-color: #fdc500;
+                color: #00509d;
+                border: 2px solid #00509d;
+                cursor: pointer;
+            }
+            .input-radio,
+            .input-checkbox {
+                cursor: pointer;
+            }
+            @media (max-width: 760px) {
+                form {
+                margin: 2vw;
+                margin-top: 5vw;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">COVID-19 Vaccine<br>Survey Form</h1>
+            <p id="description">Let's get back to normal.</p>
+        </header>
+            <form id="survey-form">
+                <div class="form-group">
+                <label for="name" id="name-label">Full Name</label>
+                <input
+                    id="name"
+                    type="name"
+                    placeholder="Full Name" 
+                    class="form-control"
+                    required><br>
+                <label for="email" id="email-label">Email</label>
+                <input
+                    id="email" 
+                    type="email" 
+                    placeholder="E-mail"
+                    class="form-control" 
+                    required><br>
+                <label for="number" id="number-label">Age</label>
+                <input 
+                    id="number" 
+                    type="number" 
+                    min="1"
+                    max="100"
+                    placeholder="Age"
+                    class="form-control"><br>
+                </div>
+                <div class="form-group">
+                <p>Have you received a COVID-19 vaccine?</p>
+                <input
+                    id="vaccine-yes-no"
+                    name="vaccine-yes-no"
+                    type="radio"
+                    value="yes"
+                    class="input-radio">
+                    <label for="yes">Yes</label>
+                <input
+                    id="vaccine-yes-no" 
+                    name="vaccine-yes-no" 
+                    type="radio" 
+                    value="no"
+                    class="input-radio">
+                <label for="no">No</label><br>
+                </div>
+                <div class="form-group">
+                <p>If yes, which vaccine did you receive?</p><br>
+                    <select id="dropdown" name="dropdown" class="form-control">
+                        <option disabled selected value>Choose one</option>
+                        <option value="pfizer">Pfizer-BioNTech Comirnaty</option>
+                        <option value="moderna">Moderna Spikevax</option>
+                        <option value="astrazeneca">AstraZeneca Vaxzevria</option>
+                        <option value="j&j">Janssen (Johnson & Johnson)</option>
+                    </select><br>
+                </div>
+                <div class="form-group">
+                <p>If not, what makes it difficult for you to get a COVID-19 vaccine? (Select all that apply.)</p>
+                <input 
+                    id="physical-limitation" 
+                    name="physical-limitation" 
+                    type="checkbox" 
+                    value="physical-limitation"
+                    class="input-checkbox">
+                <label for="physical-limitation">I can’t go on my own (I have a physical limitation).</label><br>
+                <input 
+                    id="dont-know" 
+                    name="dont-know" 
+                    type="checkbox" 
+                    value="dont-know"
+                    class="input-checkbox">
+                <label for="dont-know"> I don’t know where to go to get vaccinated.</label><br>
+                <input 
+                    id="not-eligible" 
+                    name="not-eligible" 
+                    type="checkbox" 
+                    value="not-eligible"
+                    class="input-checkbox">
+                <label for="not-eligible">I’m not eligible to get a COVID-19 vaccine.</label><br>
+                <input 
+                    id="medical-reasons" 
+                    name="medical-reasons" 
+                    type="checkbox" 
+                    value="medical-reasons"
+                    class="input-checkbox">
+                <label for="medical-reasons"> I have a medical reason
+                    that makes me ineligible to get
+                    vaccinated (e.g., I have had a
+                    severe allergy to vaccines in
+                    the past).</label><br>
+                <input 
+                    id="no-time" 
+                    name="no-time" 
+                    type="checkbox" 
+                    value="no-time"
+                    class="input-checkbox">
+                <label for="no-time">I don’t have time off work.</label><br>
+                <input 
+                    id="other" 
+                    name="other" 
+                    type="checkbox" 
+                    value="other"
+                    class="input-checkbox">
+                <label for="other">Other <em>(Briefly explain in the textbox below.)</em></label><br>
+            </div>
+            <div class="form-group">
+                <p>If a COVID-19 vaccine were available to you, would you get it?</p>
+                <input 
+                    id="vaccine-intention" 
+                    name="vaccine-intention" 
+                    type="radio" 
+                    value="yes-asap"
+                    class="input-radio">
+                <label for="yes-asap">Yes, I would get it as soon as possible.</label><br>
+                <input 
+                    id="vaccine-intention" 
+                    name="vaccine-intention" 
+                    type="radio" 
+                    value="yes-wait"
+                    class="input-radio">
+                <label for="yes-wait">Yes, but I plan to wait to get it.</label><br>
+                <input 
+                    id="vaccine-intention" 
+                    name="vaccine-intention" 
+                    type="radio" 
+                    value="no"
+                    class="input-radio">
+                <label for="no">No</label><br>
+                <input 
+                    id="vaccine-intention" 
+                    name="vaccine-intention" 
+                    type="radio" 
+                    value="not-sure"
+                    class="input-radio">
+                <label for="not-sure">Not sure</label><br>
+            </div>
+            <div class="form-group">
+                <p>Comments</p><br>
+                <textarea
+                name="comments" 
+                id="comments" 
+                class="input-textarea"
+                placeholder="We would love to know more!"></textarea><br>
+                <button id="submit" type="submit">Submit</button>
+            </div>
+            </form>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
